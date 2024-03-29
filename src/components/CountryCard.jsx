@@ -19,7 +19,7 @@ const CountryCard = () => {
 
   
   if (!country) {
-    return <div>Loading...</div>;
+    return <div className='flex justify-center text-cyan-800 text-lg font-semibold'>Loading...</div>;
   }
 
   return (

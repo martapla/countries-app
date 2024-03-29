@@ -23,10 +23,33 @@ const CountryCard = () => {
   }
 
   return (
-    <div>
-      <h1>{country.name.common}</h1>
-      <img src={country.flags.png} alt={`${country.name.common} flag`} />
-      <p>Population: {country.population}</p>
+    <div className="background-image pt-10 pb-80">
+
+      <h1 className='flex justify-center border-2 bg-white bg-opacity-30 mx-20 rounded-md text-cyan-800 text-2xl md:text-4xl'>{country.name.common}</h1>
+
+      <img className="flex justify-center px-6 mx-auto py-10" src={country.flags.png} alt={`${country.name.common} flag`} />
+
+      <div className='flex flex-col items-start text-sm p-4 border-2 bg-white bg-opacity-30 mx-2 md:mx-10 rounded-md'>
+          <p className='flex md:text-xl gap-2'><strong>Capital:</strong> {country.capital}</p>
+
+          <p className='flex   md:text-xl gap-2'><strong>Population:</strong> {country.population}</p>
+
+          <p className='flex  md:text-xl gap-2'><strong>Continent:</strong> {country.continents}</p>
+
+          <p className='flex  md:text-xl gap-2'>
+            <strong>Languages:</strong> 
+            {Object.entries(country.languages).map(([languageCode, languageName]) => (
+              <span key={languageCode}>{languageName}</span>
+            ))}
+          </p>
+
+          <p className='flex flex-col md:text-xl  hover:text-red-400'>
+            <strong>Map:</strong>
+            <a href={country.maps.googleMaps} target="_blank" rel="noopener noreferrer">
+              {country.maps.googleMaps}
+            </a>
+          </p>
+      </div>
     </div>
   );
 };

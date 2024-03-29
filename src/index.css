@@ -3,10 +3,17 @@
 @tailwind utilities;
 
 
-
-
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
+}
+
+.background-image {
+  background-image: url('https://i.pinimg.com/564x/d2/6c/e5/d26ce53eef91e2ba6d7586b41a4786ca.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed;
+  height: 100%;
+  opacity: 0.8;
 }

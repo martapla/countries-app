@@ -5,10 +5,10 @@ const RegionButtons = ({ onRegionChange }) => {
   const regions = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania','All'];
 
   return (
-    <div className='flex justify-center text-1xl font-bold gap-6 my-14  '>
+    <div className='flex flex-wrap justify-center text-md md:text-2xl font-bold gap-6 my-10 md:my-14 mx-6'>
       {regions.map((region, index) => (
           <button
-              className='hover:text-red-400'
+              className=' text-cyan-800 hover:text-red-500 hover:underline'
               key={index}
               onClick={() => onRegionChange(region)}>{region}
           </button>

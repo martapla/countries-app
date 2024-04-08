@@ -49,7 +49,7 @@ const CountriesList = () => {
   
     <div className="background-image pb-40 lg:pb-80">
       
-      <h2 className="flex justify-center text-white text-4xl md:text-6xl lg:text-7xl font-bold text-center mx-4 pt-10 md:pt-16">Countries of the World</h2>
+      <h2 className="flex justify-center text-white text-5xl md:text-6xl lg:text-7xl font-bold text-center mx-4 pt-10 md:pt-16">Countries of the World</h2>
      
       <SearchBar onSearch={handleSearch} />
 
